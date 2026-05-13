@@ -678,24 +678,6 @@ The distributed MapReduce implementation reduces end-to-end execution time compa
 
 ---
 
-## Resume Bullet Points / Interview Highlights
-
-> Use these as starting points for resume bullet points or interview talking points.
-
-- **Engineered a distributed key-value cache in Go** using the Raft consensus protocol with leader election, log replication, and majority-based commit for strong consistency across a replicated cluster.
-
-- **Implemented the Raft consensus algorithm** including `RequestVote` RPC, `AppendEntries` RPC, randomized election timeouts, persistent state recovery, commit index advancement, and log consistency checks — handling leader crashes, follower failures, and split-vote scenarios.
-
-- **Built a fault-tolerant distributed MapReduce framework** with a master-worker architecture, supporting parallel map/reduce execution, intermediate file partitioning via consistent hashing, and automatic task reassignment upon worker crash or timeout.
-
-- **Designed concurrent coordination infrastructure** using Go goroutines, channels, and mutexes to manage election timers, heartbeat loops, RPC handlers, and apply loops — validated with Go's race detector under stress testing.
-
-- **Achieved fault tolerance in MapReduce** through 10-second task timeouts, stale task detection via a background ticker goroutine, atomic output file writes, and error-driven task reassignment — passing crash recovery and parallelism test suites.
-
-- **Reduced MapReduce execution time** compared to sequential baseline by parallelizing map and reduce phases across multiple concurrent worker processes with RPC-based task scheduling.
-
----
-
 ## License
 
 This project is for educational and portfolio purposes.
